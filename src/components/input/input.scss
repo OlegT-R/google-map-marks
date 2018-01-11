@@ -1,0 +1,32 @@
+@import '../../styles/variables/colors';
+
+.input {
+  border-bottom: 0;
+  width: 100%;
+  input {
+    width: 100%;
+    font-size: 1.6rem;
+    border: 0;
+    outline: 0;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid $text-light;
+    border-radius: 0 !important;
+  }
+  .focus-line {
+    position: relative;
+    top: -1px;
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    transition: width .5s ease-in;
+    padding-bottom: 2px;
+  }
+
+  &.focused {
+    .focus-line {
+      padding-bottom: 0;
+      border-bottom: 2px solid $clr-main;
+      width: 100%;
+    }
+  }
+}

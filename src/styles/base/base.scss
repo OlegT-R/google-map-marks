@@ -1,0 +1,55 @@
+@import '../variables/dimensions';
+@import './reset';
+@import './root';
+
+.grid{
+  width: 100%;
+  max-width: $grid-max-width;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+  box-sizing: border-box;
+  min-width: 320px;
+  position: relative;
+  margin: 0 auto;
+}
+.row{
+  margin-left: -$gutter-width;
+  margin-right: -$gutter-width;
+}
+
+.clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.fl-r {
+  display: inline-block;
+  float: right;
+}
+
+.fl-l {
+  display: inline-block;
+  float: left;
+}
+
+.react-spinner{
+  animation: App-logo-spin infinite 4s linear;
+  height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.cut-text{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

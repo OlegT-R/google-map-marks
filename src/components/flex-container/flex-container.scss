@@ -1,0 +1,30 @@
+@import '../../styles/variables/dimensions';
+@import '../../styles/variables/colors';
+
+.flex-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: $bg-primary;
+  border: 1px solid $clr-separator;
+
+  .left-area, .right-area {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+    padding-top: 2rem;
+    float: left;
+  }
+
+  .left-area {
+    width: 40%;
+  }
+
+  .right-area {
+    width: 60%;
+  }
+
+  @media (max-width: $screen-sm) {
+    .left-area, .right-area {
+      width: 100%;
+    }
+  }
+}
