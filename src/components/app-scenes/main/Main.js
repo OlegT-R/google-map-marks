@@ -61,8 +61,8 @@ export default class Main extends React.Component {
     }
 
     onChange = async (type, data) => {
-        const {sort, sortDirection, page} = this.state;
         this.state[type] = data;
+        const {sort, sortDirection, page} = this.state;
         this.setState({tasks: null});
         const {tasks, total_task_count} = await loadTasks(page, sort, sortDirection);
         this.setState({tasks, totalTaskCount: total_task_count});
@@ -113,7 +113,7 @@ export default class Main extends React.Component {
                 <div className="login-link"
                      onClick={() => this.onLoginLink()}>{sessionService.isAdmin() ? 'Logout' : 'Login'}</div>
                 <div className="add-button-container">
-                    <Button bsStyle="primary" onClick={() => this.setState({show: true})}>Add task</Button>
+                    <Button bsStyle="primary" onClick={() => window.location.href = urls.addingTask}>Add task</Button>
                 </div>
                 <div className="sort-container">
                     <DropdownButton
