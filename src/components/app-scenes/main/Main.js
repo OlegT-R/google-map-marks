@@ -1,19 +1,20 @@
 import React from 'react';
-import './main-scene.scss';
+import Col from 'react-bootstrap/lib/Col';
+import Button from 'react-bootstrap/lib/Button';
+import DropdownButton from 'react-bootstrap/lib/DropdownButton';
+import MenuItem from 'react-bootstrap/lib/MenuItem';
+import Row from 'react-bootstrap/lib/Row';
 import Pagination from '../../common/pagination/pagination';
 import Task from '../../common/task/task';
 import Popup from '../../common/popup/Popup';
 import TaskEditor from '../../common/task-editor/taskEditor';
 import apiService from '../../../services/apiService';
 import sessionService from '../../../services/sessionService';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
-import Button from 'react-bootstrap/lib/Button';
-import DropdownButton from 'react-bootstrap/lib/DropdownButton';
-import MenuItem from 'react-bootstrap/lib/MenuItem';
-import spinner from '../../../assets/logo.svg';
 import {getTotalPagesCount, objectToArray, urls} from '../../../utils/miscUtils';
 import notifyService from "../../../services/notifyService";
+import './main-scene.scss';
+import spinner from '../../../assets/logo.svg';
+
 
 const sortFields = {
     username: 'username',
