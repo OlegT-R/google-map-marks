@@ -7,7 +7,7 @@ function Header(props) {
             <div className="popup-title">
                 {props.children}
             </div>
-            <span className="popup-close-icon icon acr-cross" onClick={props.onClose}/>
+            <span className="popup-close-icon" onClick={props.onClose}>&#10006;</span>
         </div>
     );
 }
