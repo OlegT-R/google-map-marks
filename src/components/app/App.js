@@ -1,14 +1,31 @@
 import React, {Component} from 'react';
-import AppScene from '../app-scene/AppScene';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import '../../styles/base-styles.scss';
+import router from '../../services/router';
+
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            Component: router.getCurrentScene(),
+        }
+
+    }
+
     render() {
+        const {Component} = this.state;
         return (
             <section className="app">
-                <div className="grid">
-                    <h1>Тестовое задание: редактор маршрутов.</h1>
-                    <AppScene />
-                </div>
+                <Grid>
+                    <Row>
+                        <div className="app-scene">
+                            <Component/>
+                        </div>
+                    </Row>
+                </Grid>
             </section>
         );
     }

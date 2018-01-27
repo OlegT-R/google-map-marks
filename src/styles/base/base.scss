@@ -1,20 +1,17 @@
-@import '../variables/dimensions';
-@import './reset';
-@import './root';
+@import "../variables/colors";
 
-.grid{
-  width: 100%;
-  max-width: $grid-max-width;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
-  box-sizing: border-box;
-  min-width: 320px;
-  position: relative;
-  margin: 0 auto;
+.app {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 100vh;
 }
-.row{
-  margin-left: -$gutter-width;
-  margin-right: -$gutter-width;
+
+.app-scene {
+  min-height: 100%;
+  height: auto;
+  background: $clr-primary;
+  border: 1px solid $clr-separator;
+  padding: 3rem 2rem;
 }
 
 .clearfix {
@@ -35,21 +32,24 @@
   float: left;
 }
 
-.react-spinner{
+.react-spinner {
   animation: App-logo-spin infinite 4s linear;
   height: 90px;
   margin: 0 auto;
   display: block;
 }
 
-
-.cut-text{
+.cut-text {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
